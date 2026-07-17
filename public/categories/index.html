@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categories · 魔女审判</title>
+<meta name="description" content="魔女审判：一个充满魔法和审判仪式的个人博客。">
+<link rel="stylesheet" href="/css/theme.css">
+
+  </head>
+  <body class="theme-witch">
+    <div class="page-shell">
+      <header class="site-header">
+  <div class="nav-bar">
+    <nav class="main-nav" role="navigation">
+      
+        <a href="/" data-nav-id="home">首页</a>
+      
+        <a href="/about/" data-nav-id="about">关于</a>
+      
+        <a href="/posts/" data-nav-id="posts">文章</a>
+      
+    </nav>
+  </div>
+</header>
+
+      <audio id="siteAudio" preload="auto"></audio>
+      <main class="page-main">
+        
+<section class="list-shell list-shell-center">
+  <header class="section-heading section-heading-center">
+    <h1>Categories</h1>
+    
+  </header>
+  <div class="cards cards-grid">
+    
+    
+      <p>暂无内容。</p>
+    
+  </div>
+  <nav class="pagination">
+    
+    <span class="pager-info">第 1 页 / 共 0 页</span>
+    
+  </nav>
+</section>
+
+      </main>
+      <footer class="site-footer">
+  <p>魔女审判 · 2026</p>
+</footer>
+
+    </div>
+    <div class="page-transition" id="pageTransition">
+  <div class="transition-panel">
+    <div class="transition-circle">
+      <div class="glyph glyph-1"></div>
+      <div class="glyph glyph-2"></div>
+      <div class="glyph glyph-3"></div>
+    </div>
+    <p id="transitionLabel">审判进行中</p>
+  </div>
+</div>
+<script>
+(function(){
+  const pageTransition = document.getElementById('pageTransition');
+
+  
+  
+  
+    
+      
+      
+        
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+
+  const transitionSongs = [{"name":"CommonTrial_Ema05117.ogg","src":"/change/change2/CommonTrial_Ema05117.ogg"}];
+  const transitionAudio = transitionSongs.length ? new Audio(transitionSongs[0].src) : null;
+  if (transitionAudio) {
+    transitionAudio.loop = true;
+    transitionAudio.volume = 0.16;
+    transitionAudio.preload = 'auto';
+  }
+
+  const showTransition = () => {
+    pageTransition.classList.add('visible');
+    if (transitionAudio) {
+      transitionAudio.currentTime = 0;
+      transitionAudio.play().catch(() => {});
+    }
+    return new Promise(resolve => setTimeout(resolve, 900));
+  };
+
+  const hideTransition = () => {
+    pageTransition.classList.remove('visible');
+    if (transitionAudio) {
+      transitionAudio.pause();
+      transitionAudio.currentTime = 0;
+    }
+  };
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
+    if (link.target === '_blank') return;
+    const isSameOrigin = link.href.startsWith(window.location.origin);
+    if (isSameOrigin) {
+      link.addEventListener('click', async e => {
+        e.preventDefault();
+        await showTransition();
+        window.location.href = href;
+      });
+    }
+  });
+
+  window.addEventListener('pageshow', hideTransition);
+})();
+</script>
+
+  </body>
+</html>

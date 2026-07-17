@@ -1,0 +1,106 @@
+<div class="player-card player-card-rich">
+  <div class="player-avatar">
+    <img src="{{ "image/Pin_Sherry.png" | relURL }}" alt="avatar">
+  </div>
+  <div class="player-controls">
+    <div class="player-title" id="playerTitle">审判音乐播放器</div>
+    <div class="player-tools">
+      <button id="prevBtn" class="btn icon-btn" type="button">⟨</button>
+      <button id="playBtn" class="btn play-btn" type="button">▶</button>
+      <button id="nextBtn" class="btn icon-btn" type="button">⟩</button>
+    </div>
+    <div class="player-progress-wrap">
+      <input id="progress" type="range" min="0" max="100" value="0">
+    </div>
+    <div class="player-select-wrap">
+      <select id="playlist" aria-label="播放列表">
+        {{ range (readDir "static/songs") }}
+          {{ if not .IsDir }}
+            <option value="{{ (printf "songs/%s" .Name) | relURL }}">{{ .Name }}</option>
+          {{ end }}
+        {{ end }}
+      </select>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const audio = document.getElementById('siteAudio');
+  const playBtn = document.getElementById('playBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const playlist = document.getElementById('playlist');
+  const progress = document.getElementById('progress');
+  const titleEl = document.getElementById('playerTitle');
+
+  const tracks = Array.from(playlist.options).map(o => ({ src: o.value, title: o.text }));
+  let index = Number(localStorage.getItem('musicIndex')) || 0;
+  let isPlaying = false;
+
+  const getNextIndex = () => {
+    return (index + 1) % tracks.length;
+  };
+
+  const loadTrack = (i, autoplay = false) => {
+    index = (i + tracks.length) % tracks.length;
+    if (!audio) return;
+    audio.src = tracks[index].src;
+    titleEl.textContent = tracks[index].title;
+    playlist.selectedIndex = index;
+    audio.load();
+    if (autoplay && isPlaying) {
+      audio.play().catch(() => {});
+    }
+    localStorage.setItem('musicIndex', index);
+  };
+
+  const setPlaying = (playing) => {
+    isPlaying = playing;
+    playBtn.textContent = playing ? '⏸' : '▶';
+  };
+
+  const play = () => {
+    if (!audio) return;
+    audio.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+  };
+
+  const pause = () => {
+    if (!audio) return;
+    audio.pause();
+    setPlaying(false);
+  };
+
+  playBtn.addEventListener('click', () => {
+    if (isPlaying) pause(); else play();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    loadTrack(index - 1, true);
+  });
+  nextBtn.addEventListener('click', () => {
+    loadTrack(index + 1, true);
+  });
+
+  playlist.addEventListener('change', () => {
+    loadTrack(playlist.selectedIndex, isPlaying);
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    if (!audio.duration) return;
+    progress.value = Math.floor((audio.currentTime / audio.duration) * 100);
+  });
+
+  progress.addEventListener('input', () => {
+    if (!audio.duration) return;
+    audio.currentTime = (progress.value / 100) * audio.duration;
+  });
+
+  audio.addEventListener('ended', () => {
+    const next = getNextIndex();
+    loadTrack(next, true);
+  });
+
+  if (index < 0 || index >= tracks.length) { index = 0; }
+  loadTrack(index, false);
+})();
+</script>

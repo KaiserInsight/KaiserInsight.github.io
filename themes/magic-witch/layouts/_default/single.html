@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <p class="post-meta">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} 分钟</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="post-subtitle">{{ . }}</p>{{ end }}
+  </header>
+  <div class="post-content">{{ .Content }}</div>
+  <div class="post-footer">
+    <a class="btn secondary" href="{{ "/posts/" | relURL }}">返回文章列表</a>
+  </div>
+</article>
+{{ end }}

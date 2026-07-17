@@ -1,0 +1,25 @@
+baseURL = "https://example.org/"
+languageCode = "zh-cn"
+title = "魔女审判"
+theme = "magic-witch"
+
+[params]
+  subtitle = "魔法少女风格的个人博客"
+  description = "魔女审判：一个充满魔法和审判仪式的个人博客。"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 3

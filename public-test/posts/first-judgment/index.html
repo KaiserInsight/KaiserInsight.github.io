@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown 教程 · 魔女审判</title>
+<meta name="description" content="魔女审判：一个充满魔法和审判仪式的个人博客。">
+<link rel="stylesheet" href="/css/theme.css">
+
+  </head>
+  <body class="theme-witch">
+    <div class="page-shell">
+      <header class="site-header">
+  <div class="nav-bar">
+    <nav class="main-nav" role="navigation">
+      
+        <a href="/" data-nav-id="home">首页</a>
+      
+        <a href="/about/" data-nav-id="about">关于</a>
+      
+        <a href="/posts/" data-nav-id="posts">文章</a>
+      
+    </nav>
+  </div>
+</header>
+
+      <audio id="siteAudio" preload="auto"></audio>
+      <main class="page-main">
+        
+<article class="post-single">
+  <header class="post-header">
+    <p class="post-meta">2026-07-16 · 1 分钟</p>
+    <h1>Markdown 教程</h1>
+    
+  </header>
+  <div class="post-content"><h2 id="markdown-进阶教程">Markdown 进阶教程</h2>
+<p>Markdown 是一种简洁的标记语言，用于书写结构化文本。以下内容帮助你从基础到进阶掌握常见语法。</p>
+<h3 id="标题">标题</h3>
+<p>使用一个或多个 <code>#</code> 表示标题层级：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 一级标题
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### 三级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#### 四级标题
+</span></span></span></code></pre></div><h3 id="段落与换行">段落与换行</h3>
+<p>输入连续文本即可生成段落。要强制换行，可在行尾添加两个空格：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>第一行␣␣
+</span></span><span style="display:flex;"><span>第二行
+</span></span></code></pre></div><p>也可以通过空行分隔段落。</p>
+<h3 id="强调与加粗">强调与加粗</h3>
+<p>使用星号或下划线表示强调：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>*斜体* 或 <span style="font-style:italic">_斜体_</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**加粗**</span> 或 <span style="font-weight:bold">__加粗__</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">**</span>*加粗斜体***
+</span></span></code></pre></div><h3 id="列表">列表</h3>
+<p>无序列表：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目一
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目二
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子项目
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 另一子项目
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 项目三
+</span></span></code></pre></div><p>有序列表：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 第一项
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 第二项
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 第三项
+</span></span></code></pre></div><p>任务列表：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> 已完成任务
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 待办任务
+</span></span></code></pre></div><h3 id="链接与图片">链接与图片</h3>
+<p>链接语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#f92672">点击这里</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span></code></pre></div><p>图片语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">图片说明</span>](<span style="color:#a6e22e">https://example.com/image.png</span>)
+</span></span></code></pre></div><p>也可以添加标题属性：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">图片说明</span>](<span style="color:#a6e22e">https://example.com/image.png &#34;悬浮标题&#34;</span>)
+</span></span></code></pre></div><h3 id="代码与高亮">代码与高亮</h3>
+<p>行内代码使用一个反引号：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>这是 <span style="color:#e6db74">`const x = 1`</span> 的示例。
+</span></span></code></pre></div><p>多行代码块使用三个反引号，并可指定语言：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>```python
+</span></span><span style="display:flex;"><span>print(&#34;Hello, Markdown&#34;)
+</span></span></code></pre></div><pre tabindex="0"><code>
+### 引用
+
+使用 `&gt;` 表示引用：
+
+```markdown
+&gt; 这是一个引用段落。
+&gt; 可以换行并保持引用格式。
+</code></pre><h3 id="表格">表格</h3>
+<p>表格用于展示结构化数据：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| 名称 | 类型 | 说明 |
+</span></span><span style="display:flex;"><span>| --- | --- | --- |
+</span></span><span style="display:flex;"><span>| Markdown | 标记语言 | 适用于文档和博客 |
+</span></span><span style="display:flex;"><span>| HTML | 标记语言 | 更强的表现力 |
+</span></span></code></pre></div><p>效果如下：</p>
+<table>
+	<thead>
+			<tr>
+					<th>名称</th>
+					<th>类型</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Markdown</td>
+					<td>标记语言</td>
+					<td>适用于文档和博客</td>
+			</tr>
+			<tr>
+					<td>HTML</td>
+					<td>标记语言</td>
+					<td>更强的表现力</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="分隔线">分隔线</h3>
+<p>使用三条或更多短横线表示分隔线：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="代码引用与嵌套">代码引用与嵌套</h3>
+<p>你可以在列表中嵌套代码块：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 步骤一
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 步骤二
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   ```bash
+</span></span><span style="display:flex;"><span>   echo &#34;Hello&#34;
+</span></span></code></pre></div><pre tabindex="0"><code>
+### 斜体、粗体与删除线组合
+
+```markdown
+**加粗**
+*斜体*
+~~删除线~~
+***加粗斜体***
+</code></pre><h3 id="链接复用与自动链接">链接复用与自动链接</h3>
+<p>引用式链接：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>这是一个[示例链接][1]。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[1]: https://example.com
+</span></span></code></pre></div><p>自动链接：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;https://example.com&gt;
+</span></span></code></pre></div><h3 id="摘要">摘要</h3>
+<p>Markdown 使用简单的标记符号来表达结构，适合写作说明文档、教程、博客和笔记。掌握标题、列表、链接、图片、代码和表格，就能应对大部分写作需求。</p>
+</div>
+  <div class="post-footer">
+    <a class="btn secondary" href="/posts/">返回文章列表</a>
+  </div>
+</article>
+
+      </main>
+      <footer class="site-footer">
+  <p>魔女审判 · 2026</p>
+</footer>
+
+    </div>
+    <div class="page-transition" id="pageTransition">
+  <div class="transition-panel">
+    <div class="transition-circle">
+      <div class="glyph glyph-1"></div>
+      <div class="glyph glyph-2"></div>
+      <div class="glyph glyph-3"></div>
+    </div>
+    <p id="transitionLabel">审判进行中</p>
+  </div>
+</div>
+<script>
+(function(){
+  const pageTransition = document.getElementById('pageTransition');
+
+  
+  
+  
+    
+      
+      
+        
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+
+  const transitionSongs = [{"name":"CommonTrial_Ema05117.ogg","src":"/change/change2/CommonTrial_Ema05117.ogg"}];
+  const transitionAudio = transitionSongs.length ? new Audio(transitionSongs[0].src) : null;
+  if (transitionAudio) {
+    transitionAudio.loop = true;
+    transitionAudio.volume = 0.16;
+    transitionAudio.preload = 'auto';
+  }
+
+  const showTransition = () => {
+    pageTransition.classList.add('visible');
+    if (transitionAudio) {
+      transitionAudio.currentTime = 0;
+      transitionAudio.play().catch(() => {});
+    }
+    return new Promise(resolve => setTimeout(resolve, 900));
+  };
+
+  const hideTransition = () => {
+    pageTransition.classList.remove('visible');
+    if (transitionAudio) {
+      transitionAudio.pause();
+      transitionAudio.currentTime = 0;
+    }
+  };
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
+    if (link.target === '_blank') return;
+    const isSameOrigin = link.href.startsWith(window.location.origin);
+    if (isSameOrigin) {
+      link.addEventListener('click', async e => {
+        e.preventDefault();
+        await showTransition();
+        window.location.href = href;
+      });
+    }
+  });
+
+  window.addEventListener('pageshow', hideTransition);
+})();
+</script>
+
+  </body>
+</html>

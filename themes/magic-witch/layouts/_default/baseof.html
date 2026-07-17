@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.Language }}{{ .Locale }}{{ else }}zh-cn{{ end }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="theme-witch">
+    <div class="page-shell">
+      {{ partial "header.html" . }}
+      <audio id="siteAudio" preload="auto"></audio>
+      <main class="page-main">
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "transition.html" . }}
+  </body>
+</html>

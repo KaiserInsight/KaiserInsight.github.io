@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>魔女审判</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on 魔女审判</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 16 Jul 2026 08:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Markdown 教程</title>
+				<link>http://localhost:1313/posts/first-judgment/</link>
+				<pubDate>Thu, 16 Jul 2026 08:00:00 +0800</pubDate>
+				<guid>http://localhost:1313/posts/first-judgment/</guid>
+				<description>全面讲解 Markdown 语法，包含标题、列表、表格、代码和扩展写法。</description>
+			</item>
+			<item>
+				<title>关于我</title>
+				<link>http://localhost:1313/about/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/about/</guid>
+				<description>&lt;p&gt;欢迎来到我的个人博客，这里记录我的职业成长、兴趣爱好和生活片段。希望你能通过这些文章更了解我的写作风格与思考方式。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;爱好：阅读、编程、旅行&lt;/li&gt;&#xA;&lt;li&gt;职业方向：前端开发与 UI 设计&lt;/li&gt;&#xA;&lt;li&gt;写作风格：真实、简洁、有温度&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
+</rss>

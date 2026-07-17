@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="hero-banner">
+  <div class="hero-banner-bg" style="background-image: url('{{ "image/Still_001_001.png" | relURL }}');"></div>
+  <div class="hero-banner-animation">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+  </div>
+  <div class="hero-banner-overlay"></div>
+  <div class="hero-banner-copy">
+    <h1>魔女审判厅</h1>
+  </div>
+</section>
+<section class="content-layout">
+  <aside class="sidebar">
+    {{ partial "player.html" . }}
+    <div class="intro-card">
+      <div class="intro-avatar">
+        <img src="{{ "image/Pin_Ema.png" | relURL }}" alt="avatar">
+      </div>
+      <div class="intro-copy">
+        <h2>欢迎来到我的博客</h2>
+        <p>这里记录我的生活、学习和项目总结。你可以通过 Markdown 添加文章，新内容会自动显示在首页。</p>
+      </div>
+    </div>
+  </aside>
+  <section class="content-panel">
+    <div class="section-heading section-heading-small">
+      <span>最新文章</span>
+      <h2>博客更新</h2>
+    </div>
+    <div class="cards cards-grid">
+      {{ $p := .Paginate (where .Site.RegularPages "Section" "posts") 6 }}
+      {{ range $p.Pages }}
+        {{ $item := . }}
+        <article class="card card-sm">
+          {{ with $item.Params.cover }}<img class="card-image" src="{{ . | relURL }}" alt="{{ $item.Title }}">{{ else }}<div class="card-image placeholder"></div>{{ end }}
+          <div class="card-body">
+            <p class="card-meta">{{ $item.Date.Format "2006-01-02" }}</p>
+            <h3><a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a></h3>
+            <p>{{ $item.Summary }}</p>
+            <a class="card-link" href="{{ $item.RelPermalink }}">查看详情</a>
+          </div>
+        </article>
+      {{ else }}
+        <p>暂无试炼内容。</p>
+      {{ end }}
+    </div>
+    <nav class="pagination">
+      {{ if $p.HasPrev }}<a class="btn" href="{{ $p.Prev.URL }}">‹ 上一页</a>{{ end }}
+      <span class="pager-info">第 {{ $p.PageNumber }} 页 / 共 {{ $p.TotalPages }} 页</span>
+      {{ if $p.HasNext }}<a class="btn" href="{{ $p.Next.URL }}">下一页 ›</a>{{ end }}
+    </nav>
+  </section>
+</section>
+{{ end }}

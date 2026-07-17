@@ -1,0 +1,7 @@
+name = "Magic Witch"
+license = "MIT"
+licenseURL = "https://opensource.org/licenses/MIT"
+min_version = "0.111.0"
+title = "魔女审判"
+description = "魔法少女风格的个人博客主题，灵感来自 Hugo Reimu 主题。"
+homepage = "https://example.org/"
