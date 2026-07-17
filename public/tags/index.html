@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51699&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tags · 魔女审判</title>
@@ -82,7 +82,11 @@
     pageTransition.classList.add('visible');
     if (transitionAudio) {
       transitionAudio.currentTime = 0;
-      transitionAudio.play().catch(() => {});
+      try {
+        transitionAudio.play();
+      } catch (err) {
+        
+      }
     }
     return new Promise(resolve => setTimeout(resolve, 900));
   };
