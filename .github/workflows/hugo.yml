@@ -35,4 +35,3 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          keep_history: true
