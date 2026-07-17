@@ -29,7 +29,11 @@
     pageTransition.classList.add('visible');
     if (transitionAudio) {
       transitionAudio.currentTime = 0;
-      transitionAudio.play().catch(() => {});
+      try {
+        transitionAudio.play();
+      } catch (err) {
+        // ignore autoplay block if it happens
+      }
     }
     return new Promise(resolve => setTimeout(resolve, 900));
   };

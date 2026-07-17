@@ -519,98 +519,12 @@
 (function(){
   const pageTransition = document.getElementById('pageTransition');
 
-  
-  
-  
-    
-      
-      
-        
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-
-  const transitionSongs = [{"name":"CommonTrial_Ema05117.ogg","src":"/change/change2/CommonTrial_Ema05117.ogg"}];
+  const transitionSongs = [
+    {
+      "name": "CommonTrial_Ema05117.ogg",
+      "src": "\/songs\/CommonTrial_Ema05117.ogg"
+    }
+  ];
   const transitionAudio = transitionSongs.length ? new Audio(transitionSongs[0].src) : null;
   if (transitionAudio) {
     transitionAudio.loop = true;
