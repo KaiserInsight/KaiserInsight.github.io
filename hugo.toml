@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://kaiserinsight.github.io/"
 locale = "zh-cn"
 title = "魔女审判"
 theme = "magic-witch"
