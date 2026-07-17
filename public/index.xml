@@ -25,7 +25,7 @@
 				<link>http://localhost:1313/about/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/about/</guid>
-				<description>&lt;p&gt;欢迎来到我的个人博客，这里记录我的职业成长、兴趣爱好和生活片段。希望你能通过这些文章更了解我的写作风格与思考方式。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;爱好：阅读、编程、旅行&lt;/li&gt;&#xA;&lt;li&gt;职业方向：前端开发与 UI 设计&lt;/li&gt;&#xA;&lt;li&gt;写作风格：真实、简洁、有温度&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+				<description>&lt;p&gt;欢迎来到我的个人博客，这里记录我的职业成长、兴趣爱好和生活片段。希望你能通过这些文章更了解我的写作风格与思考方式。</description>
 			</item>
 	</channel>
 </rss>
