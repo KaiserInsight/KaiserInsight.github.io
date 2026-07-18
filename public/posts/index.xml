@@ -14,18 +14,32 @@
 		
 			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Markdown 教程</title>
+				<title>Excel 基础教程</title>
+				<link>http://localhost:1313/posts/fouth/</link>
+				<pubDate>Thu, 16 Jul 2026 08:00:00 +0800</pubDate>
+				<guid>http://localhost:1313/posts/fouth/</guid>
+				<description>Excel 基础。</description>
+			</item>
+			<item>
+				<title>Linux 命令</title>
+				<link>http://localhost:1313/posts/third/</link>
+				<pubDate>Thu, 16 Jul 2026 08:00:00 +0800</pubDate>
+				<guid>http://localhost:1313/posts/third/</guid>
+				<description>Linux 常用命令。</description>
+			</item>
+			<item>
+				<title>Markdown 基础教程</title>
 				<link>http://localhost:1313/posts/first-judgment/</link>
 				<pubDate>Thu, 16 Jul 2026 08:00:00 +0800</pubDate>
 				<guid>http://localhost:1313/posts/first-judgment/</guid>
-				<description>全面讲解 Markdown 语法，包含标题、列表、表格、代码和扩展写法。</description>
+				<description>Markdown 基本语法。</description>
 			</item>
 			<item>
-				<title>Python 教程</title>
+				<title>Python 基础教程</title>
 				<link>http://localhost:1313/posts/second/</link>
 				<pubDate>Thu, 16 Jul 2026 08:00:00 +0800</pubDate>
 				<guid>http://localhost:1313/posts/second/</guid>
-				<description>全面讲解 Python 语法。</description>
+				<description>Python 基本语法。</description>
 			</item>
 	</channel>
 </rss>

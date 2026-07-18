@@ -1,11 +1,11 @@
 ---
-title: "Markdown 教程"
+title: "Markdown 基础教程"
 date: 2026-07-16T08:00:00+08:00
-summary: "全面讲解 Markdown 语法，包含标题、列表、表格、代码和扩展写法。"
+summary: "Markdown 基本语法。"
 cover: "image/Still_700_006.png"
 ---
 
-## Markdown 进阶教程
+
 
 Markdown 是一种简洁的标记语言，用于书写结构化文本。以下内容帮助你从基础到进阶掌握常见语法。
 

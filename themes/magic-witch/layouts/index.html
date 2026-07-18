@@ -30,7 +30,7 @@
       <h2>博客更新</h2>
     </div>
     <div class="cards cards-grid">
-      {{ $p := .Paginate (where .Site.RegularPages "Section" "posts") 6 }}
+      {{ $p := .Paginate (where .Site.RegularPages "Section" "posts") 1 }}
       {{ range $p.Pages }}
         {{ $item := . }}
         <article class="card card-sm">
