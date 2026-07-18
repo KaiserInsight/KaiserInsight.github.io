@@ -1,0 +1,131 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Linux 命令 · 魔女审判</title><meta name=description content="魔女审判：一个充满魔法和审判仪式的个人博客。"><link rel=stylesheet href=/css/theme.css></head><body class=theme-witch><div class=page-shell><header class=site-header><div class=nav-bar><nav class=main-nav role=navigation><a href=/ data-nav-id=home>首页</a>
+<a href=/about/ data-nav-id=about>关于</a>
+<a href=/posts/ data-nav-id=posts>文章</a></nav></div></header><audio id=siteAudio preload=auto></audio><main class=page-main><article class=post-single><header class=post-header><p class=post-meta>2026-07-16 · 3 分钟</p><h1>Linux 命令</h1></header><div class=post-content><h1 id=1-系统信息>1. 系统信息</h1><h2 id=查看系统版本>查看系统版本</h2><pre><code>cat /etc/os-release
+</code></pre><h2 id=查看内核版本>查看内核版本</h2><pre><code>uname -r
+</code></pre><h2 id=查看完整系统信息>查看完整系统信息</h2><pre><code>uname -a
+</code></pre><h2 id=查看cpu>查看CPU</h2><pre><code>lscpu
+</code></pre><h2 id=查看cpu核心数量>查看CPU核心数量</h2><pre><code>nproc
+</code></pre><h2 id=查看内存>查看内存</h2><pre><code>free -h
+</code></pre><h2 id=查看磁盘>查看磁盘</h2><pre><code>df -h
+</code></pre><h2 id=查看运行时间>查看运行时间</h2><pre><code>uptime
+</code></pre><hr><h1 id=2-文件与目录>2. 文件与目录</h1><h2 id=查看目录>查看目录</h2><pre><code>ls
+</code></pre><h2 id=详细列表>详细列表</h2><pre><code>ls -l
+</code></pre><h2 id=查看隐藏文件>查看隐藏文件</h2><pre><code>ls -a
+</code></pre><h2 id=人性化显示>人性化显示</h2><pre><code>ls -lh
+</code></pre><h2 id=当前目录>当前目录</h2><pre><code>pwd
+</code></pre><h2 id=进入目录>进入目录</h2><pre><code>cd 目录
+</code></pre><h2 id=返回上级>返回上级</h2><pre><code>cd ..
+</code></pre><h2 id=返回home>返回home</h2><pre><code>cd ~
+</code></pre><h2 id=创建目录>创建目录</h2><pre><code>mkdir dirname
+</code></pre><h2 id=递归创建>递归创建</h2><pre><code>mkdir -p a/b/c
+</code></pre><h2 id=创建文件>创建文件</h2><pre><code>touch file.txt
+</code></pre><h2 id=删除文件>删除文件</h2><pre><code>rm file.txt
+</code></pre><h2 id=强制删除>强制删除</h2><pre><code>rm -f file.txt
+</code></pre><h2 id=删除目录>删除目录</h2><pre><code>rm -rf dirname
+</code></pre><h2 id=复制文件>复制文件</h2><pre><code>cp source target
+</code></pre><h2 id=复制目录>复制目录</h2><pre><code>cp -r dir1 dir2
+</code></pre><h2 id=移动文件>移动文件</h2><pre><code>mv file /path
+</code></pre><h2 id=文件改名>文件改名</h2><pre><code>mv old new
+</code></pre><hr><h1 id=3-文件查看>3. 文件查看</h1><h2 id=查看文件>查看文件</h2><pre><code>cat file
+</code></pre><h2 id=分页查看>分页查看</h2><pre><code>less file
+</code></pre><h2 id=查看前10行>查看前10行</h2><pre><code>head file
+</code></pre><h2 id=查看指定行>查看指定行</h2><pre><code>head -n 20 file
+</code></pre><h2 id=查看最后10行>查看最后10行</h2><pre><code>tail file
+</code></pre><h2 id=实时查看日志>实时查看日志</h2><pre><code>tail -f logfile
+</code></pre><hr><h1 id=4-文件搜索>4. 文件搜索</h1><h2 id=查找文件>查找文件</h2><pre><code>find / -name filename
+</code></pre><h2 id=查找普通文件>查找普通文件</h2><pre><code>find . -type f
+</code></pre><h2 id=查找目录>查找目录</h2><pre><code>find . -type d
+</code></pre><h2 id=按大小查找>按大小查找</h2><pre><code>find / -size +1G
+</code></pre><h2 id=搜索文本>搜索文本</h2><pre><code>grep &quot;keyword&quot; file
+</code></pre><h2 id=递归搜索>递归搜索</h2><pre><code>grep -r &quot;keyword&quot; path
+</code></pre><h2 id=显示行号>显示行号</h2><pre><code>grep -n &quot;error&quot; file
+</code></pre><hr><h1 id=5-权限管理>5. 权限管理</h1><p>权限：</p><pre><code>r = read
+w = write
+x = execute
+</code></pre><h2 id=查看权限>查看权限</h2><pre><code>ls -l
+</code></pre><h2 id=修改权限>修改权限</h2><pre><code>chmod 755 file
+</code></pre><h2 id=添加执行权限>添加执行权限</h2><pre><code>chmod +x script.sh
+</code></pre><h2 id=修改文件所有者>修改文件所有者</h2><pre><code>chown user file
+</code></pre><h2 id=修改目录所有者>修改目录所有者</h2><pre><code>chown -R user:group dir
+</code></pre><hr><h1 id=6-用户管理>6. 用户管理</h1><h2 id=查看用户>查看用户</h2><pre><code>cat /etc/passwd
+</code></pre><h2 id=添加用户>添加用户</h2><pre><code>useradd username
+</code></pre><h2 id=创建home目录>创建home目录</h2><pre><code>useradd -m username
+</code></pre><h2 id=删除用户>删除用户</h2><pre><code>userdel username
+</code></pre><h2 id=修改密码>修改密码</h2><pre><code>passwd username
+</code></pre><h2 id=切换用户>切换用户</h2><pre><code>su username
+</code></pre><h2 id=管理员模式>管理员模式</h2><pre><code>sudo -i
+</code></pre><hr><h1 id=7-软件管理>7. 软件管理</h1><h2 id=debian--ubuntu>Debian / Ubuntu</h2><p>更新：</p><pre><code>apt update
+</code></pre><p>升级：</p><pre><code>apt upgrade
+</code></pre><p>安装：</p><pre><code>apt install package
+</code></pre><p>删除：</p><pre><code>apt remove package
+</code></pre><h2 id=centos--rocky>CentOS / Rocky</h2><p>安装：</p><pre><code>yum install package
+</code></pre><p>更新：</p><pre><code>yum update
+</code></pre><hr><h1 id=8-进程管理>8. 进程管理</h1><p>查看进程：</p><pre><code>ps aux
+</code></pre><p>实时查看：</p><pre><code>top
+</code></pre><p>高级：</p><pre><code>htop
+</code></pre><p>搜索：</p><pre><code>ps aux | grep nginx
+</code></pre><p>结束：</p><pre><code>kill PID
+</code></pre><p>强制结束：</p><pre><code>kill -9 PID
+</code></pre><p>后台运行：</p><pre><code>command &amp;
+</code></pre><hr><h1 id=9-服务管理>9. 服务管理</h1><p>查看服务：</p><pre><code>systemctl status nginx
+</code></pre><p>启动：</p><pre><code>systemctl start nginx
+</code></pre><p>停止：</p><pre><code>systemctl stop nginx
+</code></pre><p>重启：</p><pre><code>systemctl restart nginx
+</code></pre><p>开机启动：</p><pre><code>systemctl enable nginx
+</code></pre><p>取消启动：</p><pre><code>systemctl disable nginx
+</code></pre><hr><h1 id=10-网络管理>10. 网络管理</h1><p>查看IP：</p><pre><code>ip addr
+</code></pre><p>查看端口：</p><pre><code>ss -tulpn
+</code></pre><p>测试网络：</p><pre><code>ping www.baidu.com
+</code></pre><p>DNS查询：</p><pre><code>nslookup domain.com
+</code></pre><p>下载：</p><pre><code>wget URL
+</code></pre><p>HTTP请求：</p><pre><code>curl URL
+</code></pre><hr><h1 id=11-磁盘管理>11. 磁盘管理</h1><p>查看空间：</p><pre><code>df -h
+</code></pre><p>查看目录大小：</p><pre><code>du -sh dirname
+</code></pre><p>查看设备：</p><pre><code>lsblk
+</code></pre><p>挂载：</p><pre><code>mount /dev/sdb1 /mnt
+</code></pre><p>卸载：</p><pre><code>umount /mnt
+</code></pre><hr><h1 id=12-压缩解压>12. 压缩解压</h1><h2 id=targz压缩>tar.gz压缩</h2><pre><code>tar -czvf file.tar.gz folder
+</code></pre><h2 id=targz解压>tar.gz解压</h2><pre><code>tar -xzvf file.tar.gz
+</code></pre><h2 id=zip压缩>zip压缩</h2><pre><code>zip file.zip files
+</code></pre><h2 id=zip解压>zip解压</h2><pre><code>unzip file.zip
+</code></pre><hr><h1 id=13-ssh远程>13. SSH远程</h1><p>连接：</p><pre><code>ssh user@host
+</code></pre><p>指定端口：</p><pre><code>ssh -p 2222 user@host
+</code></pre><p>上传：</p><pre><code>scp file user@host:/path
+</code></pre><p>下载：</p><pre><code>scp user@host:/file .
+</code></pre><hr><h1 id=14-环境变量>14. 环境变量</h1><p>查看：</p><pre><code>env
+</code></pre><p>查看PATH：</p><pre><code>echo $PATH
+</code></pre><p>设置：</p><pre><code>export NAME=value
+</code></pre><p>永久设置：</p><pre><code>vim ~/.bashrc
+</code></pre><p>刷新：</p><pre><code>source ~/.bashrc
+</code></pre><hr><h1 id=15-日志管理>15. 日志管理</h1><p>查看日志：</p><pre><code>journalctl
+</code></pre><p>实时：</p><pre><code>journalctl -f
+</code></pre><p>服务日志：</p><pre><code>journalctl -u nginx
+</code></pre><hr><h1 id=16-定时任务>16. 定时任务</h1><p>编辑：</p><pre><code>crontab -e
+</code></pre><p>查看：</p><pre><code>crontab -l
+</code></pre><p>格式：</p><pre><code>分 时 日 月 周 命令
+</code></pre><p>例：</p><pre><code>0 3 * * * /backup.sh
+</code></pre><hr><h1 id=17-docker>17. Docker</h1><p>查看版本：</p><pre><code>docker version
+</code></pre><p>查看容器：</p><pre><code>docker ps
+</code></pre><p>全部容器：</p><pre><code>docker ps -a
+</code></pre><p>查看镜像：</p><pre><code>docker images
+</code></pre><p>下载镜像：</p><pre><code>docker pull image
+</code></pre><p>运行：</p><pre><code>docker run -d image
+</code></pre><p>进入容器：</p><pre><code>docker exec -it id bash
+</code></pre><p>查看日志：</p><pre><code>docker logs id
+</code></pre><p>停止：</p><pre><code>docker stop id
+</code></pre><p>删除：</p><pre><code>docker rm id
+</code></pre><hr><h1 id=18-git>18. Git</h1><p>初始化：</p><pre><code>git init
+</code></pre><p>状态：</p><pre><code>git status
+</code></pre><p>添加：</p><pre><code>git add .
+</code></pre><p>提交：</p><pre><code>git commit -m &quot;message&quot;
+</code></pre><p>拉取：</p><pre><code>git pull
+</code></pre><p>推送：</p><pre><code>git push
+</code></pre><p>克隆：</p><pre><code>git clone url
+</code></pre><hr><h1 id=19-vim>19. Vim</h1><p>进入：</p><pre><code>vim file
+</code></pre><p>插入：</p><pre><code>i
+</code></pre><p>保存：</p><pre><code>:w
+</code></pre><p>退出：</p><pre><code>:q
+</code></pre><p>保存退出：</p><pre><code>:wq
+</code></pre><p>强制退出：</p><pre><code>:q!
+</code></pre><p>搜索：</p><pre><code>/keyword
+</code></pre><hr><h1 id=20-常用快捷键>20. 常用快捷键</h1><table><thead><tr><th>快捷键</th><th>作用</th></tr></thead><tbody><tr><td>Ctrl+C</td><td>终止程序</td></tr><tr><td>Ctrl+D</td><td>退出</td></tr><tr><td>Ctrl+L</td><td>清屏</td></tr><tr><td>Ctrl+A</td><td>行首</td></tr><tr><td>Ctrl+E</td><td>行尾</td></tr><tr><td>Ctrl+U</td><td>删除前内容</td></tr><tr><td>Ctrl+K</td><td>删除后内容</td></tr><tr><td>Tab</td><td>自动补全</td></tr><tr><td>↑↓</td><td>历史命令</td></tr></tbody></table><hr><h1 id=linux命令速记>Linux命令速记</h1><p>ls 查看文件</p><p>cd 切换目录</p><p>pwd 当前路径</p><p>cp 复制</p><p>mv 移动</p><p>rm 删除</p><p>find 查找</p><p>grep 搜索</p><p>chmod 权限</p><p>chown 所属</p><p>ps 进程</p><p>kill 结束进程</p><p>systemctl 服务</p><p>ssh 远程</p><p>scp 传输</p><p>tar 压缩</p><p>df 磁盘</p><p>du 大小</p><p>top 资源</p><p>docker 容器</p><p>git 版本控制</p></div><div class=post-footer><a class="btn secondary" href=/posts/>返回文章列表</a></div></article></main><footer class=site-footer><p>魔女审判 · 2026</p></footer></div><div class=page-transition id=pageTransition><div class=transition-panel><div class=transition-circle><div class="glyph glyph-1"></div><div class="glyph glyph-2"></div><div class="glyph glyph-3"></div></div><p id=transitionLabel>审判进行中</p></div></div><script>(function(){const t=document.getElementById("pageTransition"),n=[{name:"CommonTrial_Ema05117.ogg",src:"/songs/CommonTrial_Ema05117.ogg"}],e=n.length?new Audio(n[0].src):null;e&&(e.loop=!0,e.volume=.16,e.preload="auto");const s=()=>{if(t.classList.add("visible"),e){e.currentTime=0;try{e.play()}catch{}}return new Promise(e=>setTimeout(e,900))},o=()=>{t.classList.remove("visible"),e&&(e.pause(),e.currentTime=0)};document.querySelectorAll("a[href]").forEach(e=>{const t=e.getAttribute("href");if(!t||t.startsWith("#")||t.startsWith("mailto:")||t.startsWith("javascript:"))return;if(e.target==="_blank")return;const n=e.href.startsWith(window.location.origin);n&&e.addEventListener("click",async e=>{e.preventDefault(),await s(),window.location.href=t})}),window.addEventListener("pageshow",o)})()</script></body></html>
